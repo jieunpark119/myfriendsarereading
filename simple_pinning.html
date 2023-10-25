@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>What my friends are reading</title>
+
+	<link rel="stylesheet" href="assets/css/normalize.css" type="text/css">
+	<link rel="stylesheet" href="assets/css/style.css" type="text/css">
+	<link rel="stylesheet" href="assets/css/examples.css" type="text/css">
+	<link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+	<script type="text/javascript" src="assets/js/lib/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/lib/highlight.pack.js"></script>
+	<script type="text/javascript" src="assets/js/lib/modernizr.custom.min.js"></script>
+	<script type="text/javascript" src="assets/js/examples.js"></script>
+
+	<script type="text/javascript" src="scrollmagic/uncompressed/ScrollMagic.js"></script>
+	<script type="text/javascript" src="scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+</head>
+
+<body>
+
+	<div id="nav">What my friends are reading</div>
+	<div id="bgtext">You'd love this book</div>
+
+	<div id="content-wrapper">
+		<div id="example-wrapper">
+			<div class="scrollContent">
+				<section id="titlechart">
+					<div id="description">
+
+					</div>
+					<script>
+						// init controller
+						var controller = new ScrollMagic.Controller();
+					</script>
+				</section>
+
+				<section class="demo" style="height:20px;">
+					<div class="spacer s2"></div>
+					<div id="trigger0" class="spacer s0"></div>
+
+					<div id="pin0" class="box2 blue">
+
+					</div>
+					<div class="spacer s2"></div>
+					<script>
+						$(function () { // wait for document ready
+							// build scene
+
+							var scene = new ScrollMagic.Scene({
+									triggerElement: "#trigger0",
+									duration: 300
+								})
+								.on("enter", function () {
+									// trigger animation by changing inline style.
+									document.body.style.backgroundColor = "white";
+									document.getElementById("nav").innerHTML = "What my friends are reading";
+
+								})
+
+								.setPin("#pin0")
+
+								.addTo(controller);
+						});
+					</script>
+				</section>
+
+				<section class="demo">
+					<div class="spacer s2"></div>
+					<div id="trigger1" class="spacer s0"></div>
+
+					<div id="pin1" class="box2 blue">
+
+						<img height="400"
+							src="https://www.yvon-lambert.com/cdn/shop/products/CFI_PhotographybyHarryGriffin_ArtdirectionbyLauraCoombs.jpg?v=1674064137&width=1445">
+					</div>
+					<div class="spacer s2"></div>
+					<script>
+						$(function () { // wait for document ready
+							// build scene
+
+							var scene = new ScrollMagic.Scene({
+									triggerElement: "#trigger1",
+									duration: 300
+								})
+								.on("enter", function () {
+									// trigger animation by changing inline style.
+									document.body.style.backgroundColor = "#24FF11";
+									document.getElementById("nav").innerHTML = "Megan Bowker is reading...";
+								})
+
+								.setPin("#pin1")
+
+								.addTo(controller);
+						});
+					</script>
+				</section>
+				<section class="demo">
+					<div class="spacer s2"></div>
+					<div id="trigger2" class="spacer s0"></div>
+					<div id="pin2" class="box2 blue">
+
+						<img height="400"
+							src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqznQwvQozGP9oTmp1y1TXFG9vlxc8pV3M9w&usqp=CAU">
+					</div>
+					<div class="spacer s2"></div>
+					<script>
+						$(function () { // wait for document ready
+							// build scene
+
+							var scene = new ScrollMagic.Scene({
+									triggerElement: "#trigger2",
+									duration: 300
+								})
+								.setPin("#pin2")
+								.on("enter", function () {
+									// trigger animation by changing inline style.
+									document.body.style.backgroundColor = "#d36540";
+									document.getElementById("nav").innerHTML = "Mable Ye is reading...";
+								})
+								.addTo(controller);
+
+						});
+					</script>
+				</section>
+				<section class="demo">
+					<div class="spacer s2"></div>
+					<div id="trigger3" class="spacer s0"></div>
+					<div id="pin3" class="box2 blue">
+
+						<img height="400"
+							src="https://cdn.filepicker.io/api/file/A8jtRlQStC4TFw2s1LaA/convert?fit=max&h=874&w=1312&compress=true&fit=max">
+					</div>
+					<div class="spacer s2"></div>
+					<script>
+						$(function () { // wait for document ready
+							// build scene
+
+							var scene = new ScrollMagic.Scene({
+									triggerElement: "#trigger3",
+									duration: 300
+								})
+								.setPin("#pin3")
+								.on("enter", function () {
+									// trigger animation by changing inline style.
+									document.body.style.backgroundColor = "#3A5688";
+									document.getElementById("nav").innerHTML = "Sarah Chang is reading...";
+								})
+								.addTo(controller);
+
+						});
+					</script>
+				</section>
+
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
